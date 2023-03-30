@@ -7,9 +7,11 @@
     <title>Interior</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 <body>  
 
@@ -51,21 +53,47 @@
     <div class="container m-auto text-center 2xl:flex ">
         
         
-             <div class=" 2xl:mt-20 2xl:ml-16 heading flex-col justify-center xl:relative p-4 2xl:p-0 text-2xl font-semibold 2xl:font-normal  xl:text-6xl  ">
+            <div class=" 2xl:mt-20 2xl:ml-16 heading flex-col justify-center xl:relative p-4 2xl:p-0 text-2xl font-semibold 2xl:font-normal  xl:text-6xl  ">
                <div class="flex  justify-center gap-3 xl:gap-6"> 
                     <div> WHY</div><div>WE</div>
                 </div> 
-                <div class="bottom  ">
+                <div class="new" id="new">
                     <div class="2xl:absolute 2xl:left-0">ARE</div> 
-                    <div class="2xl:mt-16 2xl:absolute 2xl:left-0 " >BETTER</div><div class="2xl:mt-32 2xl:absolute 2xl:left-0"> THAN</div><div class="2xl:mt-48 2xl:absolute 2xl:left-0 " > OTHERS</div>
+                    <div class="better" id="better">
+                        <div class="2xl:mt-16 2xl:absolute 2xl:left-0 " >BETTER</div><div class="2xl:mt-32 2xl:absolute 2xl:left-0"> THAN</div><div class="2xl:mt-48 2xl:absolute 2xl:left-0 " > OTHERS</div>
+                    </div>
+                    <div class="typing 2xl:absolute 2xl:left-0 2xl:mt-16"></div>
+                   
+                    
                 </div>
             </div>
+            <script>
+             const betterThanOthers = document.querySelector('#better');
+            const typing = document.querySelector('.typing');
+            let i = 0;
+            let text = 'BEST';
+            setTimeout(()=>{
+            function typeLetter() {           
+                typing.textContent += text[i];
+                i++;
+            if (i >= text.length) {
+                clearInterval(interval);
+            }
+}
+            let interval = setInterval(typeLetter, 100);
+            betterThanOthers.style.display = 'none';
+        
+    },2000)
+    
+
+                
+            </script>
         
         <!-- CARD 3 -->
-        <div class="collection  2xl:flex 2xl:flex-wrap 2xl:flex-row-reverse 2xl:m-10 ">
-            <div class="cards">
-                <div class="card text-center m-auto "  style="width: 18rem;">
-                    <div class="images relative">
+        <div  class="collection 2xl:flex 2xl:flex-wrap 2xl:flex-row-reverse 2xl:m-10 ">
+            <div class="cards hover:translate-y-1">
+                <div data-aos="flip-left" class="card  text-center m-auto "  style="width: 18rem;">
+                    <div class="images  relative">
                         <img src="/images/ellipse.png" class="m-auto " alt="...">
                         <img src="/images/3.png" width="86px" class="m-auto absolute top-12 left-28 " alt="" srcset="">
                         <img src="/images/4.png" width="32.53px" class="m-auto absolute top-[70px] left-[138px]  ">
@@ -79,8 +107,8 @@
                 </div>
             </div>
             <!-- CARD 2 -->
-            <div class="cards">
-                <div class="card text-center m-auto 2xl:mr-20  "  style="width: 18rem;">
+            <div class="cards hover:translate-y-1">
+                <div data-aos="flip-left" class="card text-center m-auto 2xl:mr-20  "  style="width: 18rem;">
                     <div class="images  relative">
                         <img src="/images/ellipse.png" class="m-auto " alt="...">
                         <img src="/images/2.png" width="86px" class="m-auto absolute top-16 left-28 " alt="" srcset="">
@@ -93,8 +121,8 @@
                 </div>
             </div>
             <!-- CARD 1 -->
-            <div class="cards">
-                <div class="card text-center m-auto 2xl:mr-20 "  style="width: 18rem;">
+            <div data-aos="flip-left" class="cards  ">
+                <div class="card text-center m-auto 2xl:mr-20 hover:translate-y-1"  style="width: 18rem;">
                     <div class="images  relative">
                         <img src="/images/ellipse.png" class="m-auto " alt="...">
                         <img src="/images/1.png" width="86px" class="m-auto absolute top-16 left-28 " alt="" srcset="">
@@ -106,8 +134,8 @@
                 </div>
             </div>
             <!-- CARD 5 -->
-            <div class="cards 2xl:mr-28 ">
-                <div class="card text-center m-auto  "  style="width: 18rem;">
+            <div class="cards hover:translate-y-1 2xl:mr-28 ">
+                <div data-aos="flip-left" class="card text-center m-auto  "  style="width: 18rem;">
                     <div class="images  relative">
                         <img src="/images/ellipse.png" class="m-auto " alt="...">
                         <img src="/images/6.png" width="86px" class="m-auto absolute top-16 left-28 " alt="" srcset="">
@@ -123,8 +151,8 @@
                 </div>
             </div>
             <!-- CARD 4 -->
-            <div class="cards 2xl:mr-28 ">
-                <div class="cards text-center m-auto  "  style="width: 18rem;">
+            <div class="cards hover:translate-y-1 2xl:mr-28 ">
+                <div data-aos="flip-left" class="cards hover:translate-y-1 text-center m-auto  "  style="width: 18rem;">
                     <div class="images  relative">
                         <img src="/images/ellipse.png" class="m-auto " alt="...">
                         <img src="/images/5.png" width="86px" class="m-auto absolute top-16 left-[114px] " alt="" srcset="">
@@ -144,15 +172,15 @@
 <!-- SERVICES SECTION  -->
 
 <section class="bg-white">
-    <div class="container1 text-center">
+    <div  data-aos-offset="100" data-aos="fade-in" class="container1 text-center">
         <div class="heading services text-xl font-semibold 2xl:font-thin 2xl:text-5xl text-[#4B563E] mt-10">OUR SERVICES</div>
         <div class="heading desc  2xl:text-2xl p-4 md:text-xl  ">Our plans reflect creativity and innovation. We are also known for our advanced usage of technology to deliver fabulous homes for our clients.  </div>
       
       
         <div class="newCards xl:flex xl:justify-between xl:p-10 ">
             <!-- CARD 1 -->
-            <div class="cards">
-                <div class="card text-center m-auto "  style="width: 18rem;">
+            <div class="cards hover:translate-y-1">
+                <div data-aos="flip-right" class="card text-center m-auto "  style="width: 18rem;">
                     <div class="images relative">
                         <img src="/images/ellipse.png" class="m-auto " alt="...">
                         <img src="/images/9.png" width="57px" height="69.67px" class="m-auto absolute top-20 left-[120px] " alt="" srcset="">                    
@@ -165,7 +193,7 @@
 
             <!-- CARD 2 -->
 
-           <div class="cards">
+           <div data-aos="flip-right" class="cards hover:translate-y-1">
                 <div class="card text-center m-auto "  style="width: 18rem;">
                     <div class="images relative">
                         <img src="/images/ellipse.png" class="m-auto " alt="...">
@@ -178,7 +206,7 @@
             </div>
 
             <!-- CARD 3 -->
-            <div class="cards">
+            <div data-aos="flip-right" class="cards hover:translate-y-1">
                 <div class="card text-center m-auto "  style="width: 18rem;">
                     <div class="images relative">
                         <img src="/images/ellipse.png" class="m-auto " alt="...">
@@ -197,24 +225,24 @@
 
 <!-- GALLERY SECTION -->
 <section >
-    <div class="container2  text-center ">
+    <div data-aos-offset="100" data-aos="fade-in" class="container2  text-center ">
 
         <div class="heading services text-3xl 2xl:text-5xl text-[#4B563E] mt-10">GALLERY</div>
         <div class="heading desc  xl:text-2xl md:text-lg lg:text-xl   p-4  m-3">If you’re on the lookout for simple home interior designs, look no further than HomeLane for end- to-end interior design services. </div>
         <div class="card_container 2xl:flex 2xl:justify-between ">
-            <div class="img m-auto p-2 w-[300px] 2xl:w-[419px] ">
+            <div data-aos-offset="300" data-aos="zoom-in" class="img m-auto p-2 w-[300px] 2xl:w-[419px] ">
                 <img src="/images/11.png" width="100%">
                 <div class="room relative w-[100%] h-[50px] text-center 2xl:h-[74px] bg-[#F3E875] font-medium ">
                     <p class="heading absolute  ml-5 top-[30%] left-0"> Living room</p>
                 </div>
             </div>
-            <div class="img m-auto  p-2 w-[300px] 2xl:w-[419px] ">
+            <div data-aos-offset="300" data-aos="zoom-in" class="img m-auto  p-2 w-[300px] 2xl:w-[419px] ">
                 <img src="/images/12.png" width="100%">
                 <div class="room relative w-[100%] h-[50px] text-center 2xl:h-[74px] bg-[#F3E875] font-medium ">
                     <p class="heading absolute  ml-5 top-[30%] left-0"> Kitchen</p>
                 </div>
             </div>
-            <div class="img m-auto  p-2 w-[300px] 2xl:w-[419px] ">
+            <div data-aos-offset="300" data-aos="zoom-in" class="img m-auto  p-2 w-[300px] 2xl:w-[419px] ">
                 <img src="/images/13.png" width="100%">
                 <div class="room relative w-[100%] h-[50px] text-center 2xl:h-[74px] bg-[#F3E875] font-medium ">
                     <p class="heading absolute ml-5 top-[30%]  left-0"> Bathroom</p>
@@ -232,7 +260,7 @@
     
 
         <div class="content md:flex p-4 md:justify-between  ">
-            <div class="heading  text-sm xl:text-[16px]  flex-col">
+            <div class="heading  text-[13px] xl:text-[16px]  flex-col">
                 <div class="  address">
                         <h5 class="font-semibold">Address</h5>
                         <p>A-137/C-158 Unitech Arcadia Commercial Complex South City 2 Gurgaon- 122 018</p>
@@ -249,14 +277,30 @@
                     </div>
                 </div>
             <div class=" heading mt-5 lg:text-sm text-[12px] md:w-72 xl:text-[17px]  closing">
-               <p> Thank you for considering our home interior design services.</p><p class="hidden 2xl:block "> .Our team  is dedicated towards  making the design process seamless.</p>
+               <p> Thank you for considering our home interior design services.</p><p class="hidden ">Our team  is dedicated towards  making the design process seamless.</p>
             </div>
        </div>
-       
-    
 </section>
+<!-- COPYRIGHTS SECTION -->
+<footer
+  class="bg-white text-center dark:bg-neutral-700 lg:text-left">
+  <div class="p-4 text-center text-neutral-700 dark:text-neutral-200">
+    © 2023 Copyright:
+    <a
+      class=" text-neutral-800  "
+      href="#"
+      >Interior</a
+    >
+  </div>
+</footer>
 
-
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+       
+        duration:1000
+    });
+  </script>
 
 <!-- <script src="vj.js"></script>     -->
 </body>
