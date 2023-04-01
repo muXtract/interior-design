@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
 
 </head>
 <body>  
@@ -18,7 +20,7 @@
 
     <div class="flex justify-between  ">
         <!-- Website Logo -->
-        <div class="">
+        <div class="2xl:ml-10">
             <a href="#" class="flex items-center py-4 px-2">
                 <img src="images/sofa 1.png" alt="Logo" class="h-12 w-12 mr-2" />
                 
@@ -28,156 +30,85 @@
         <div class="flex ">
             <a
                 href="index.html"
-                class="py-4 px-2 text-gray-500 text-xl  hover:text-green-400 font-semibold transition duration-300 "
+                class="py-4 px-2 text-gray-500 text-lg  hover:text-green-400 font-semibold transition duration-300 "
                 >Home</a
             >
             <a
                 href=""
-                class="py-4 px-2 text-gray-500 text-xl font-semibold hover:text-green-400 transition duration-300"
+                class="py-4 px-2 text-gray-500 text-lg font-semibold hover:text-green-400 transition duration-300"
                 >Services</a
             >
             <a
                 href="gallery.html"
-                class="py-4 px-2 text-gray-500 text-xl font-semibold hover:text-green-400 transition duration-300"
+                class="py-4 px-2 text-gray-500 text-lg font-semibold hover:text-green-400 transition duration-300"
                 >Gallery</a
             >
             <a
                 href="contactUs.html"
-                class="py-4 px-2 text-gray-500 text-xl font-semibold hover:text-green-400 transition duration-300"
+                class="py-4 px-2 text-gray-500 text-lg font-semibold hover:text-green-400 transition duration-300"
                 >Contact Us</a
             >
         </div>
     </div>
     <!-- BETTER SECTION  -->
-<section class="bg-[#C9E2B8]">
-    <div class="container m-auto text-center 2xl:flex ">
-        
-        
-            <div class=" 2xl:mt-20 2xl:ml-16 heading flex-col justify-center xl:relative p-4 2xl:p-0 text-2xl font-semibold 2xl:font-normal  xl:text-6xl  ">
-               <div class="flex  justify-center gap-3 xl:gap-6"> 
-                    <div> WHY</div><div>WE</div>
-                </div> 
-                <div class="new" id="new">
-                    <div class="2xl:absolute 2xl:left-0">ARE</div> 
-                    <div class="better" id="better">
-                        <div class="2xl:mt-16 2xl:absolute 2xl:left-0 " >BETTER</div><div class="2xl:mt-32 2xl:absolute 2xl:left-0"> THAN</div><div class="2xl:mt-48 2xl:absolute 2xl:left-0 " > OTHERS</div>
-                    </div>
-                    <div class="typing 2xl:absolute 2xl:left-0 2xl:mt-16"></div>
-                   
-                    
-                </div>
-            </div>
-            <script>
-             const betterThanOthers = document.querySelector('#better');
-            const typing = document.querySelector('.typing');
-            let i = 0;
-            let text = 'BEST';
-            setTimeout(()=>{
-            function typeLetter() {           
-                typing.textContent += text[i];
-                i++;
-            if (i >= text.length) {
-                clearInterval(interval);
-            }
-}
-            let interval = setInterval(typeLetter, 100);
-            betterThanOthers.style.display = 'none';
-        
-    },2000)
-    
+    <section class="bg-[#C9E2B8]">
+        <div class="container m-auto text-center lg:flex ">
+            <div class="lg:w-1/4 grid justify-center items-center">
 
-                
-            </script>
-        
+                <h1 class="text-2xl md:text-8xl heading leading-loose font-bold text-gray-900">Why are we better than others</h1>
+            </div>
         <!-- CARD 3 -->
-        <div  class="collection 2xl:flex 2xl:flex-wrap 2xl:flex-row-reverse 2xl:m-10 ">
-            <div class="cards hover:translate-y-1">
-                <div data-aos="flip-left" class="card  text-center m-auto "  style="width: 18rem;">
-                    <div class="images  relative">
-                        <img src="/images/ellipse.png" class="m-auto " alt="...">
-                        <img src="/images/3.png" width="86px" class="m-auto absolute top-12 left-28 " alt="" srcset="">
-                        <img src="/images/4.png" width="32.53px" class="m-auto absolute top-[70px] left-[138px]  ">
-                        
+        <div class="grid grid-cols-4 justify-center items-center px-2 lg:w-3/4 lg:gap-y-5 py-10 lg:grid-cols-6">
+<div class="grid col-span-2 justify-center items-center w-full">
+    <img src="./images/ellipse.png" alt="" class="mx-auto">
+    <h2 class="text-xl font-semibold lg:text-3xl">Timely Delivery</h2>
+    <p class="text-gray-600 px-3 text-sm lg:text-xl lg:w-[80%] mx-auto tracking-wider"> Design is our passion! Our team of Top Interior </p>
+</div>
+<div class="grid col-span-2 justify-center items-center w-full">
+    <img src="./images/ellipse.png" alt="" class="mx-auto">
+    <h2 class="text-xl font-semibold lg:text-3xl">Timely Delivery</h2>
+    <p class="text-gray-600 px-3 text-sm lg:text-xl lg:w-[80%] mx-auto tracking-wider"> Design is our passion! Our team of Top Interior </p>
+</div>
+<div class="grid col-span-2 justify-center items-center w-full">
+    <img src="./images/ellipse.png" alt="" class="mx-auto">
+    <h2 class="text-xl font-semibold lg:text-3xl">Timely Delivery</h2>
+    <p class="text-gray-600 px-3 text-sm lg:text-xl lg:w-[80%] mx-auto tracking-wider"> Design is our passion! Our team of Top Interior </p>
+</div>
+<div class="hidden lg:block"></div>
 
-                    
-                    </div>    
-                   
-                    <h4 class="heading card-title 2xl:text-lg  font-semibold text-sm  text-black ">CHEAP & BEST PRODUCTS</h4>  
-                    <h5 class="heading">Design is our passion! Our team of Top Interior</h5>
-                </div>
-            </div>
-            <!-- CARD 2 -->
-            <div class="cards hover:translate-y-1">
-                <div data-aos="flip-left" class="card text-center m-auto 2xl:mr-20  "  style="width: 18rem;">
-                    <div class="images  relative">
-                        <img src="/images/ellipse.png" class="m-auto " alt="...">
-                        <img src="/images/2.png" width="86px" class="m-auto absolute top-16 left-28 " alt="" srcset="">
+<div class="grid col-span-2 justify-center items-center w-full">
+    <img src="./images/ellipse.png" alt="" class="mx-auto">
+    <h2 class="text-xl font-semibold lg:text-3xl">Timely Delivery</h2>
+    <p class="text-gray-600 px-3 text-sm lg:text-xl lg:w-[80%] mx-auto tracking-wider"> Design is our passion! Our team of Top Interior </p>
+</div>
+<div class="lg:hidden"></div>
+<div class="grid col-span-2 justify-center items-center w-full">
+    <img src="./images/ellipse.png" alt="" class="mx-auto">
+    <h2 class="text-xl font-semibold lg:text-3xl">Timely Delivery</h2>
+    <p class="text-gray-600 px-3 text-sm lg:text-xl lg:w-[80%] mx-auto tracking-wider"> Design is our passion! Our team of Top Interior </p>
+</div>
 
-                        
-                    </div>    
-                   
-                    <h4 class="heading card-title 2xl:text-lg  font-semibold text-sm text-black ">ECO FRIENDLY PRODUCTS</h4>  
-                    <h5 class="heading">Design is our passion! Our team of Top Interior </h5>
-                </div>
-            </div>
-            <!-- CARD 1 -->
-            <div data-aos="flip-left" class="cards  ">
-                <div class="card text-center m-auto 2xl:mr-20 hover:translate-y-1"  style="width: 18rem;">
-                    <div class="images  relative">
-                        <img src="/images/ellipse.png" class="m-auto " alt="...">
-                        <img src="/images/1.png" width="86px" class="m-auto absolute top-16 left-28 " alt="" srcset="">
-                       
-                    </div>    
-                   
-                    <h4 class="heading card-title 2xl:text-lg  font-semibold text-sm text-black ">TIMELY DELIVERY</h4>  
-                    <h5 class="heading">Design is our passion! Our team of Top Interior </h5>
-                </div>
-            </div>
-            <!-- CARD 5 -->
-            <div class="cards hover:translate-y-1 2xl:mr-28 ">
-                <div data-aos="flip-left" class="card text-center m-auto  "  style="width: 18rem;">
-                    <div class="images  relative">
-                        <img src="/images/ellipse.png" class="m-auto " alt="...">
-                        <img src="/images/6.png" width="86px" class="m-auto absolute top-16 left-28 " alt="" srcset="">
-                        <img src="/images/8.png" width="72.21px" class="m-auto absolute bottom-[59px] left-[118px] ">
-                        <img src="/images/7.png" width="25.09px" class="m-auto absolute bottom-[73px] left-[142px]" srcset="">
-                        
 
-                       
-                    </div>    
-                   
-                    <h4 class="heading card-title 2xl:text-lg  font-semibold text-sm text-black ">COSTING</h4>  
-                    <h5 class="heading">Design is our passion! Our team of Top Interior </h5>
-                </div>
-            </div>
-            <!-- CARD 4 -->
-            <div class="cards hover:translate-y-1 2xl:mr-28 ">
-                <div data-aos="flip-left" class="cards hover:translate-y-1 text-center m-auto  "  style="width: 18rem;">
-                    <div class="images  relative">
-                        <img src="/images/ellipse.png" class="m-auto " alt="...">
-                        <img src="/images/5.png" width="86px" class="m-auto absolute top-16 left-[114px] " alt="" srcset="">
-                       
-                    </div>    
-                   
-                    <h4 class="heading card-title 2xl:text-lg  font-semibold text-sm text-black ">UNIFORMITY</h4>  
-                    <h5 class="heading">Design is our passion! Our team of Top Interior </h5>
-                </div>
-            </div>
+
         </div>
     </div>
        
 </section>
 
+    
+
+
+
 
 <!-- SERVICES SECTION  -->
 
-<section class="bg-white">
-    <div  data-aos-offset="100" data-aos="fade-in" class="container1 text-center">
+<section class="bg-white ">
+    <div  data-aos-offset="100" data-aos="fade-in" class="container1  text-center">
         <div class="heading services text-xl font-semibold 2xl:font-thin 2xl:text-5xl text-[#4B563E] mt-10">OUR SERVICES</div>
         <div class="heading desc  2xl:text-2xl p-4 md:text-xl  ">Our plans reflect creativity and innovation. We are also known for our advanced usage of technology to deliver fabulous homes for our clients.  </div>
       
       
-        <div class="newCards xl:flex xl:justify-between xl:p-10 ">
+        <div class="newCards xl:flex xl:justify-between xl:p-5">
             <!-- CARD 1 -->
             <div class="cards hover:translate-y-1">
                 <div data-aos="flip-right" class="card text-center m-auto "  style="width: 18rem;">
@@ -206,7 +137,8 @@
             </div>
 
             <!-- CARD 3 -->
-            <div data-aos="flip-right" class="cards hover:translate-y-1">
+            <div data-aos="flip-right" class="  cards hover:translate-y-1">
+
                 <div class="card text-center m-auto "  style="width: 18rem;">
                     <div class="images relative">
                         <img src="/images/ellipse.png" class="m-auto " alt="...">
@@ -219,8 +151,7 @@
             </div>
 
         </div>
-        <button class="heading font-semibold btn border-2 m-auto mt-2 rounded-2xl border-black p-4 w-72 "><a href="#" class="hover:text-blue-600">EXPLORE MORE</a></button>
-    </div>
+       
 </section>
 
 <!-- GALLERY SECTION -->
@@ -298,10 +229,8 @@
   <script>
     AOS.init({
        
-        duration:1000
+        duration:3000
     });
   </script>
-
-<!-- <script src="vj.js"></script>     -->
 </body>
 </html>
