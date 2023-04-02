@@ -11,11 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
 
 </head>
 <body>  
 
 
+<<<<<<< HEAD
     <nav class="bg-white shadow-lg">
         <div class="">
             
@@ -53,136 +56,98 @@
                 </div>
             </div>
     </nav>
-    <!-- BETTER SECTION  -->
-<section class="bg-[#C9E2B8]">
-    <div class="container m-auto text-center 2xl:flex ">
-        
-        
-            <div class=" 2xl:mt-20 2xl:ml-16 heading flex-col justify-center xl:relative p-4 2xl:p-0 text-2xl font-semibold 2xl:font-normal  xl:text-6xl  ">
-               <div class="flex  justify-center gap-3 xl:gap-6"> 
-                    <div> WHY</div><div>WE</div>
-                </div> 
-                <div class="new" id="new">
-                    <div class="2xl:absolute 2xl:left-0">ARE</div> 
-                    <div class="better" id="better">
-                        <div class="2xl:mt-16 2xl:absolute 2xl:left-0 " >BETTER</div><div class="2xl:mt-32 2xl:absolute 2xl:left-0"> THAN</div><div class="2xl:mt-48 2xl:absolute 2xl:left-0 " > OTHERS</div>
-                    </div>
-                    <div class="typing 2xl:absolute 2xl:left-0 2xl:mt-16"></div>
-                   
-                    
-                </div>
-            </div>
-            <script>
-             const betterThanOthers = document.querySelector('#better');
-            const typing = document.querySelector('.typing');
-            let i = 0;
-            let text = 'BEST';
-            setTimeout(()=>{
-            function typeLetter() {           
-                typing.textContent += text[i];
-                i++;
-            if (i >= text.length) {
-                clearInterval(interval);
-            }
-}
-            let interval = setInterval(typeLetter, 100);
-            betterThanOthers.style.display = 'none';
-        
-    },2000)
-    
-
+=======
+    <div class="flex justify-between  ">
+        <!-- Website Logo -->
+        <div class="2xl:ml-10">
+            <a href="#" class="flex items-center py-4 px-2">
+                <img src="images/sofa 1.png" alt="Logo" class="h-12 w-12 mr-2" />
                 
-            </script>
-        
+            </a>
+        </div>
+        <!-- Primary Navbar items -->
+        <div class="flex ">
+            <a
+                href="index.html"
+                class="py-4 px-2 text-gray-500 text-lg  hover:text-green-400 font-semibold transition duration-300 "
+                >Home</a
+            >
+            <a
+                href=""
+                class="py-4 px-2 text-gray-500 text-lg font-semibold hover:text-green-400 transition duration-300"
+                >Services</a
+            >
+            <a
+                href="gallery.html"
+                class="py-4 px-2 text-gray-500 text-lg font-semibold hover:text-green-400 transition duration-300"
+                >Gallery</a
+            >
+            <a
+                href="contactUs.html"
+                class="py-4 px-2 text-gray-500 text-lg font-semibold hover:text-green-400 transition duration-300"
+                >Contact Us</a
+            >
+        </div>
+    </div>
+>>>>>>> c1febde323d130c84d9629d7723e7d6589b3a998
+    <!-- BETTER SECTION  -->
+    <section class="bg-[#C9E2B8]">
+        <div class="container m-auto text-center lg:flex ">
+            <div class="lg:w-1/4 grid justify-center items-center p-1">
+                <h1 class="text-2xl md:text-4xl font-semibold lg:font-thin lg:text-6xl heading leading-loose xl:text-7xl 2xl:ml-10 text-gray-900">Why are we better than others</h1>
+            </div>
         <!-- CARD 3 -->
-        <div  class="collection 2xl:flex 2xl:flex-wrap 2xl:flex-row-reverse 2xl:m-10 ">
-            <div class="cards hover:translate-y-1">
-                <div data-aos="flip-left" class="card  text-center m-auto "  style="width: 18rem;">
-                    <div class="images  relative">
-                        <img src="/images/ellipse.png" class="m-auto " alt="...">
-                        <img src="/images/3.png" width="86px" class="m-auto absolute top-12 left-28 " alt="" srcset="">
-                        <img src="/images/4.png" width="32.53px" class="m-auto absolute top-[70px] left-[138px]  ">
-                        
+        <div class="grid grid-cols-4 justify-center items-center px-2 lg:w-3/4 lg:gap-y-5 py-5 lg:grid-cols-6 lg:ml-4">
+<div class="grid col-span-2 justify-center items-center w-full">
+    <img src="./images/clock.png" alt="" class="mx-auto">
+    <h2 class="text-lg font-semibold md:text-xl xl:text-2xl ">TIMELY DELIVERY</h2>
+    <p class="text-gray-600 px-3  md:text-lg text-sm lg:text-xl lg:w-[80%] mx-auto tracking-wider"> Design is our passion! </p>
+</div>
+<div class="grid col-span-2 justify-center items-center w-full">
+    <img src="./images/leaf.png" alt="" class="mx-auto">
+    <h2 class="text-lg font-semibold md:text-xl  xl:text-2xl ">ECO FRIENDLY</h2>
+    <p class="text-gray-600 px-3 md:text-lg  text-sm lg:text-xl lg:w-[80%] mx-auto tracking-wider"> Design is our passion! </p>
+</div>
+<div class="grid col-span-2 justify-center items-center w-full">
+    <img src="./images/star badge.png" alt="" class="mx-auto">
+    <h2 class="text-lg font-semibold md:text-xl  xl:text-2xl">CHEAP PRODUCTS</h2>
+    <p class="text-gray-600 px-3  md:text-lg text-sm lg:text-xl lg:w-[80%] mx-auto tracking-wider"> Design is our passion! </p>
+</div>
+<div class="hidden lg:block"></div>
 
-                    
-                    </div>    
-                   
-                    <h4 class="heading card-title 2xl:text-lg  font-semibold text-sm  text-black ">CHEAP & BEST PRODUCTS</h4>  
-                    <h5 class="heading">Design is our passion! Our team of Top Interior</h5>
-                </div>
-            </div>
-            <!-- CARD 2 -->
-            <div class="cards hover:translate-y-1">
-                <div data-aos="flip-left" class="card text-center m-auto 2xl:mr-20  "  style="width: 18rem;">
-                    <div class="images  relative">
-                        <img src="/images/ellipse.png" class="m-auto " alt="...">
-                        <img src="/images/2.png" width="86px" class="m-auto absolute top-16 left-28 " alt="" srcset="">
+<div class="grid col-span-2 justify-center items-center w-full">
+    <img src="./images/puzzle.png" alt="" class="mx-auto">
+    <h2 class="text-lg font-semibold md:text-xl xl:text-2xl">UNIFORMITY</h2>
+    <p class="text-gray-600 px-3 md:text-lg  text-sm lg:text-xl lg:w-[80%] mx-auto tracking-wider"> Design is our passion! </p>
+</div>
+<div class="lg:hidden"></div>
+<div class="grid col-span-2 justify-center items-center w-full">
+    <img src="./images/rupee.png" alt="" class="mx-auto">
+    <h2 class="text-lg font-semibold md:text-xl  xl:text-2xl">COSTING</h2>
+    <p class="text-gray-600 px-3  md:text-lg text-sm lg:text-xl lg:w-[80%] mx-auto tracking-wider"> Design is our passion! </p>
+</div>
 
-                        
-                    </div>    
-                   
-                    <h4 class="heading card-title 2xl:text-lg  font-semibold text-sm text-black ">ECO FRIENDLY PRODUCTS</h4>  
-                    <h5 class="heading">Design is our passion! Our team of Top Interior </h5>
-                </div>
-            </div>
-            <!-- CARD 1 -->
-            <div data-aos="flip-left" class="cards  ">
-                <div class="card text-center m-auto 2xl:mr-20 hover:translate-y-1"  style="width: 18rem;">
-                    <div class="images  relative">
-                        <img src="/images/ellipse.png" class="m-auto " alt="...">
-                        <img src="/images/1.png" width="86px" class="m-auto absolute top-16 left-28 " alt="" srcset="">
-                       
-                    </div>    
-                   
-                    <h4 class="heading card-title 2xl:text-lg  font-semibold text-sm text-black ">TIMELY DELIVERY</h4>  
-                    <h5 class="heading">Design is our passion! Our team of Top Interior </h5>
-                </div>
-            </div>
-            <!-- CARD 5 -->
-            <div class="cards hover:translate-y-1 2xl:mr-28 ">
-                <div data-aos="flip-left" class="card text-center m-auto  "  style="width: 18rem;">
-                    <div class="images  relative">
-                        <img src="/images/ellipse.png" class="m-auto " alt="...">
-                        <img src="/images/6.png" width="86px" class="m-auto absolute top-16 left-28 " alt="" srcset="">
-                        <img src="/images/8.png" width="72.21px" class="m-auto absolute bottom-[59px] left-[118px] ">
-                        <img src="/images/7.png" width="25.09px" class="m-auto absolute bottom-[73px] left-[142px]" srcset="">
-                        
 
-                       
-                    </div>    
-                   
-                    <h4 class="heading card-title 2xl:text-lg  font-semibold text-sm text-black ">COSTING</h4>  
-                    <h5 class="heading">Design is our passion! Our team of Top Interior </h5>
-                </div>
-            </div>
-            <!-- CARD 4 -->
-            <div class="cards hover:translate-y-1 2xl:mr-28 ">
-                <div data-aos="flip-left" class="cards hover:translate-y-1 text-center m-auto  "  style="width: 18rem;">
-                    <div class="images  relative">
-                        <img src="/images/ellipse.png" class="m-auto " alt="...">
-                        <img src="/images/5.png" width="86px" class="m-auto absolute top-16 left-[114px] " alt="" srcset="">
-                       
-                    </div>    
-                   
-                    <h4 class="heading card-title 2xl:text-lg  font-semibold text-sm text-black ">UNIFORMITY</h4>  
-                    <h5 class="heading">Design is our passion! Our team of Top Interior </h5>
-                </div>
-            </div>
+
         </div>
     </div>
        
 </section>
 
+    
+
+
+
 
 <!-- SERVICES SECTION  -->
 
-<section class="bg-white">
-    <div  data-aos-offset="100" data-aos="fade-in" class="container1 text-center">
-        <div class="heading services text-xl font-semibold 2xl:font-thin 2xl:text-5xl text-[#4B563E] mt-10">OUR SERVICES</div>
-        <div class="heading desc  2xl:text-2xl p-4 md:text-xl  ">Our plans reflect creativity and innovation. We are also known for our advanced usage of technology to deliver fabulous homes for our clients.  </div>
+<section class="bg-white ">
+    <div  data-aos-offset="100" data-aos="fade-in" class="container1  text-center">
+        <div class="heading services text-2xl md:text-4xl font-semibold 2xl:font-thin 2xl:text-5xl text-[#4B563E] mt-5">OUR SERVICES</div>
+        <div class="heading desc sm:text-lg  2xl:text-2xl p-4 md:text-xl  ">Our plans reflect creativity and innovation. We are also known for our advanced usage of technology.  </div>
       
       
-        <div class="newCards xl:flex xl:justify-between xl:p-10 ">
+        <div class="newCards lg:flex lg:justify-between lg:p-5">
             <!-- CARD 1 -->
             <div class="cards hover:translate-y-1">
                 <div data-aos="flip-right" class="card text-center m-auto "  style="width: 18rem;">
@@ -191,8 +156,8 @@
                         <img src="/images/9.png" width="57px" height="69.67px" class="m-auto absolute top-20 left-[120px] " alt="" srcset="">                    
                     </div>    
                    
-                    <h4 class="heading card-title font-semibold m-3 text-sm 2xl:text-lg  text-black ">DESIGN</h4>  
-                    <h5 class="heading"> Design is our passion! Our team of Top Interior Designers work with you to realize the home of your dreams.</h5>
+                    <h4 class="heading card-title font-semibold m-3 text-lg lg:text-xl  2xl:text-2xl  text-black ">DESIGN</h4>  
+                    <h5 class="heading text-lg lg:text-xl ">  Come build the home of your dreams with us.</h5>
                 </div>
             </div>
 
@@ -205,52 +170,57 @@
                         <img src="/images/1.png" width="86px"  class="m-auto absolute top-16 left-[112px] " alt="" srcset="">                    
                     </div>    
                    
-                    <h4 class="heading card-title  font-semibold text-sm 2xl:text-lg m-3 text-black ">EXECUTION</h4>  
-                    <h5 class="heading"> Design is our passion! Our team of Top Interior Designers work with you to realize the home of your dreams.</h5>
+                    <h4 class="heading card-title  font-semibold text-lg  lg:text-xl 2xl:text-2xl m-3 text-black ">EXECUTION</h4>  
+                    <h5 class="heading text-lg lg:text-xl  ">  Come build the home of your dreams with us.</h5>
                 </div>
             </div>
 
             <!-- CARD 3 -->
-            <div data-aos="flip-right" class="cards hover:translate-y-1">
+            <div data-aos="flip-right" class="  cards hover:translate-y-1">
+
                 <div class="card text-center m-auto "  style="width: 18rem;">
                     <div class="images relative">
                         <img src="/images/ellipse.png" class="m-auto " alt="...">
                         <img src="/images/10.png" width="73px"  class="m-auto absolute top-20 left-[120px] " alt="" srcset="">                    
                     </div>    
-                    <h4 class="heading card-title font-semibold text-sm 2xl:text-lg  m-3 text-black ">VISUALISATION</h4>  
-                    <h5 class="heading"> Design is our passion! Our team of Top Interior Designers work with you to realize the home of your dreams.</h5>
+                    <h4 class="heading card-title font-semibold text-lg  lg:text-xl 2xl:text-2xl  m-3 text-black ">VISUALISATION</h4>  
+                    <h5 class="heading text-lg lg:text-xl ">  Come build the home of your dreams with us.</h5>
 
                 </div>
             </div>
 
         </div>
+<<<<<<< HEAD
         <button class="heading font-semibold btn border-2 m-auto mt-2 rounded-2xl border-black p-4 w-72 "><a href="ourservice.html" class="hover:text-blue-600">EXPLORE MORE</a></button>
     </div>
+=======
+       
+>>>>>>> c1febde323d130c84d9629d7723e7d6589b3a998
 </section>
 
 <!-- GALLERY SECTION -->
 <section >
     <div data-aos-offset="100" data-aos="fade-in" class="container2  text-center ">
 
-        <div class="heading services text-3xl 2xl:text-5xl text-[#4B563E] mt-10">GALLERY</div>
+        <div class="heading services text-3xl md:text-4xl font-semibold 2xl:text-5xl text-[#4B563E] mt-10">GALLERY</div>
         <div class="heading desc  xl:text-2xl md:text-lg lg:text-xl   p-4  m-3">If you’re on the lookout for simple home interior designs, look no further than HomeLane for end- to-end interior design services. </div>
-        <div class="card_container 2xl:flex 2xl:justify-between ">
+        <div class="card_container lg:flex lg:justify-between ">
             <div data-aos-offset="300" data-aos="zoom-in" class="img m-auto p-2 w-[300px] 2xl:w-[419px] ">
                 <img src="/images/11.png" width="100%">
                 <div class="room relative w-[100%] h-[50px] text-center 2xl:h-[74px] bg-[#F3E875] font-medium ">
-                    <p class="heading absolute  ml-5 top-[30%] left-0"> Living room</p>
+                    <p class="heading absolute  lg:text-lg ml-5 top-[30%] left-0"> Living room</p>
                 </div>
             </div>
             <div data-aos-offset="300" data-aos="zoom-in" class="img m-auto  p-2 w-[300px] 2xl:w-[419px] ">
                 <img src="/images/12.png" width="100%">
                 <div class="room relative w-[100%] h-[50px] text-center 2xl:h-[74px] bg-[#F3E875] font-medium ">
-                    <p class="heading absolute  ml-5 top-[30%] left-0"> Kitchen</p>
+                    <p class="heading absolute  lg:text-lg ml-5 top-[30%] left-0"> Kitchen</p>
                 </div>
             </div>
             <div data-aos-offset="300" data-aos="zoom-in" class="img m-auto  p-2 w-[300px] 2xl:w-[419px] ">
                 <img src="/images/13.png" width="100%">
                 <div class="room relative w-[100%] h-[50px] text-center 2xl:h-[74px] bg-[#F3E875] font-medium ">
-                    <p class="heading absolute ml-5 top-[30%]  left-0"> Bathroom</p>
+                    <p class="heading absolute ml-5 lg:text-lg top-[30%]  left-0"> Bathroom</p>
                 </div>
             </div>
             
@@ -303,10 +273,8 @@
   <script>
     AOS.init({
        
-        duration:1000
+        duration:3000
     });
   </script>
-
-<!-- <script src="vj.js"></script>     -->
 </body>
 </html>
