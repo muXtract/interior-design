@@ -6,11 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Service</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
     </style>
+
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init("1cDNRD1CRRmIEq65Q");
+})();
+</script>
+ 
 </head>
 <body>
     <nav class="relative flex justify-between items-center bg-white">
@@ -122,8 +133,101 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- info section -->
     <div class="gallery bg-[#C9E2B8] py-4 px-6  text-center lg:h-32 lg:align-middle">
         <h1 class="text-4xl "> Our Services</h1>
-        <div> <p class="text-sm mt-2 max-w-[90%] ml-auto mr-auto"> Our plans reflect creativity and innovation. We are also known for our advanced usage of technology to deliver fabulous homes for our clients. </p></div>
+        <div> <p class="text-sm md:text-lg mt-2 max-w-[90%] ml-auto mr-auto"> Our plans reflect creativity and innovation. We are also known for our advanced usage of technology to deliver fabulous homes for our clients. </p></div>
     </div>
+    <style>
+		/* Popup container */
+		.popup {
+		  display: none;
+		  position: fixed;
+		  z-index: 1;
+		  left: 0;
+		  top: 0;
+		  width: 100%;
+		  height: 100%;
+		  overflow: auto;
+		  background-color: rgba(0,0,0,0.4);
+		}
+
+		/* Popup content */
+		.popup-content {
+		  background-color: #fefefe;
+		  margin: 10% auto;
+		  padding: 20px;
+		  border: 1px solid #888;
+		 
+		}
+
+		/* Close button */
+		.close {
+		  color: #aaaaaa;
+		  float: right;
+		  font-size: 28px;
+		  font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+		  color: #000;
+		  text-decoration: none;
+		  cursor: pointer;
+		}
+	</style>
+</head>
+<body onload="openPopup()">
+	<div class="popup " id="myPopup">
+		<div class="popup-content  w-[85%] sm:w-[50%] md:w-[40%] text-center">
+			<span class="close" onclick="closePopup()">&times;</span>
+			
+           <div class="flex  justify-center">
+            
+                <div class="max-w-[300px] rounded-xl  bg-[#C9E2B8] border border-white py-5 px-5  mt-5 md:mt-0  2xl:mt-2 mb-2 relative  md:ml-3">
+                    <div class="max-w-[350px] p-5  m-auto ">
+                  
+                      <div class="col-span-2 lg:col-span-1">
+                        <input type="text" id="name"  class="bg-[#C9E2B8] border-solid placeholder-black  border-b-2 p-3  md:text-lg w-[80%]" placeholder="Name"/>
+                      </div>
+                      <div class="col-span-2 lg:col-span-1">
+                        <input type="text"  id="phone" class="bg-[#C9E2B8] border-solid placeholder-black  border-b-2 p-3 md:text-lg w-[80%]" placeholder="Phone "/>
+                      </div>
+                      
+                      <div class="col-span-2 lg:col-span-1">
+                        <input type="email"  id="email" class="bg-[#C9E2B8] border-solid placeholder-black  border-b-2 p-3 md:text-lg w-[80%]" placeholder="Email "/>
+                      </div>
+                      
+                      <div class="col-span-2 lg:col-span-1">
+                        <input type="text"  id="city" class="bg-[#C9E2B8] border-solid placeholder-black  border-b-2 p-3 md:text-lg w-[80%]" placeholder="City"/>
+                      </div>
+                      <div class="col-span-2 lg:col-span-1">
+                        <input type="text"  id="service" class="bg-[#C9E2B8] border-solid placeholder-black  border-b-2 p-3 md:text-lg w-[80%]" placeholder="Service"/>
+                      </div>
+                      <div class="col-span-2 lg:col-span-1">
+                        <input type="text" id="budget"  class="bg-[#C9E2B8] border-solid placeholder-black  border-b-2 p-3 md:text-lg w-[80%]" placeholder="Budget"/>
+                      </div>
+                      <div class="col-span-2 lg:col-span-1">
+                        <input type="text"  id="address" class="bg-[#C9E2B8] border-solid placeholder-black  border-b-2 p-3 md:text-lg w-[80%]" placeholder="Address"/>
+                      </div>
+                    
+                      <div class="col-span-2   text-center  bg-white  rounded-lg w-[90%] ml-2 md:w-[85%]    cursor-pointer shadow-lg  p-1  hover:font-semibold    mt-5">
+                            <button onclick="SendMail()" >Get Consultation</button>
+                      </div>
+                  
+                    </div>
+                  </div>
+                
+            </div>
+		</div>
+	</div>
+
+	<script>
+		function openPopup() {
+			document.getElementById("myPopup").style.display = "block";
+		}
+
+		function closePopup() {
+			document.getElementById("myPopup").style.display = "none";
+		}
+	</script>
 
     <div class="services grid grid-cols-1 grid-rows-5 gap-2 mt-4 md:grid-rows-2 md:grid-cols-6 md:mt-6 md:gap-0">
         <!-- card1 -->
