@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 	</style>
 </head>
-<body onload="openPopup()">
+<body >
 	<div class="popup " id="myPopup">
 		<div class="popup-content  w-[85%] sm:w-[50%] md:w-[40%] text-center">
 			<span class="close" onclick="closePopup()">&times;</span>
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <div class="services grid grid-cols-1 grid-rows-5 gap-2 mt-4 md:grid-rows-2 md:grid-cols-6 md:mt-6 md:gap-0">
         <!-- card1 -->
-        <div class="cards hover:translate-y-1  pb-4 md:col-span-2" data-aos="flip-left">
+        <div onclick="openPopup()" class="cards hover:translate-y-1 cursor-pointer pb-4 md:col-span-2" data-aos="flip-left">
             <div data-aos="flip-left" class="card  text-center m-auto "  style="width: 18rem;">
                 <div class="images  relative">
                     <img src="images/msg.png" class="m-auto drop-shadow-2xl mt-4" alt="...">
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
 
         <!-- card2 -->
-        <div class="cards hover:translate-y-1 md:col-span-2" data-aos="flip-left">
+        <div onclick="openPopup()"  class="cursor-pointer cards hover:translate-y-1 md:col-span-2" data-aos="flip-left">
             <div data-aos="flip-left" class="card  text-center m-auto "  style="width: 18rem;">
                 <div class="images  relative">
                     <img src="images/key.png" class="m-auto drop-shadow-2xl mt-4 " alt="...">
@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
 
         <!-- card3 -->
-        <div class="cards hover:translate-y-1 md:col-span-2" data-aos="flip-left">
+        <div onclick="openPopup()"  class="cursor-pointer cards hover:translate-y-1 md:col-span-2" data-aos="flip-left">
             <div data-aos="flip-left" class="card  text-center m-auto "  style="width: 18rem;">
                 <div class="images  relative">
                     <img src="images/pencil.png" class="m-auto drop-shadow-2xl mt-4 " alt="...">
@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
         <!-- card4 -->
-        <div class="cards hover:translate-y-1 md:col-span-2 " data-aos="flip-left">
+        <div onclick="openPopup()"  class="cursor-pointer cards hover:translate-y-1 md:col-span-2 " data-aos="flip-left">
             <div data-aos="flip-left" class="card  text-center m-auto "  style="width: 18rem;">
                 <div class="images  relative">
                     <img src="images/roller.png" class="m-auto drop-shadow-2xl mt-4" alt="...">
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
         <!-- !-- card6 -->
-        <div class="cards hover:translate-y-1 md:col-span-2 " data-aos="flip-left">
+        <div onclick="openPopup()"  class="cursor-pointer cards hover:translate-y-1 md:col-span-2 " data-aos="flip-left">
             <div data-aos="flip-left" class="card  text-center m-auto "  style="width: 18rem;">
                 <div class="images  relative">
                     <img src="images/toolkit.png" class="m-auto drop-shadow-2xl mt-4" alt="...">
