@@ -28,7 +28,7 @@ emailjs.init("1cDNRD1CRRmIEq65Q");
 		<a class="text-3xl font-bold leading-none" href="#">
             <!-- SOFA ICON -->
 			<svg class="h-4" alt="logo" viewBox="0 0 10240 10240">
-                <img class="sofa ml-5 "  src="images/sofa 1.png" alt="Logo" />
+                <img class="sofa mb-3 ml-5 mt-0 h-16 w-20  "  src="images/logo.png" alt="Logo" />
 			</svg>
 		</a>
 		<div class="lg:hidden">
@@ -55,9 +55,9 @@ emailjs.init("1cDNRD1CRRmIEq65Q");
 		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
 		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
 			<div class="flex items-center mb-8">
-				<a class="mr-auto text-3xl font-bold leading-none" href="#">
-                    <img class="sofa"  src="images/sofa 1.png" alt="Logo" class="h-12 w-12 mr-2" />
-				</a>
+				<a class="mr-auto h-16 w-20 2xl:w-16 2xl:h-12  text-xl font-bold leading-none" href="#">
+                    <img class="sofa "  src="images/logo.png" alt="Logo" class="" />
+          </a>
 				<button class="navbar-close">
 					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		/* Close button */
 		.close {
 		  color: #aaaaaa;
-		  float: right;
+		  
 		  font-size: 28px;
 		  font-weight: bold;
 		}
@@ -176,8 +176,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </head>
 <body >
 	<div class="popup " id="myPopup">
-		<div class="popup-content  w-[85%] sm:w-[50%] md:w-[40%] text-center">
-			<span class="close" onclick="closePopup()">&times;</span>
+		<div class="popup-content relative  rounded-2xl w-[85%] sm:w-[50%] lg:w-[40%] text-center">
+			<p class="close absolute right-0 top-0 mr-3" onclick="closePopup()">&times;</p>
 			
            <div class="flex  justify-center">
             
@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <input type="text"  id="address" class="bg-[#C9E2B8] border-solid placeholder-black  border-b-2 p-3 md:text-lg w-[80%]" placeholder="Address"/>
                       </div>
                     
-                      <div class="col-span-2   text-center  bg-white  rounded-lg w-[90%] ml-2 md:w-[85%]    cursor-pointer shadow-lg  p-1  hover:font-semibold    mt-5">
+                      <div class="col-span-2 ml-5 text-center  bg-white  rounded-lg w-[74%] 2xl:ml-7     cursor-pointer shadow-lg  p-1  hover:font-semibold    mt-5">
                             <button onclick="SendMail()" >Get Consultation</button>
                       </div>
                   
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
         <!-- !-- card6 -->
-        <div onclick="openPopup()"  class="cursor-pointer cards hover:translate-y-1 md:col-span-2 " data-aos="flip-left">
+        <div onclick="openPopup()"  class="cursor-pointer  cards hover:translate-y-1 md:col-span-2 " data-aos="flip-left">
             <div data-aos="flip-left" class="card  text-center m-auto "  style="width: 18rem;">
                 <div class="images  relative">
                     <img src="images/toolkit.png" class="m-auto drop-shadow-2xl mt-4" alt="...">
