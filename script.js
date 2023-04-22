@@ -24,7 +24,7 @@ emailjs.send(serviceID,templateID,params)
         document.getElementById("budget").value="";
         document.getElementById("address").value="";
         console.log(res)
-        alert("email recieved");
+        alert("We've received your request");
     })
     .catch((err)=>console.log(err));
     console.log("hi")
