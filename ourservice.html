@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		  top: 0;
 		  width: 100%;
 		  height: 100%;
-		  overflow: auto;
+		  
 		  background-color: rgba(0,0,0,0.4);
 		}
 
@@ -176,14 +176,14 @@ document.addEventListener('DOMContentLoaded', function() {
 	</style>
 </head>
 <body >
-	<div class="popup " id="myPopup">
-		<div class="popup-content relative  rounded-2xl w-[85%] sm:w-[50%] lg:w-[40%] text-center">
+	<div class="popup  " id="myPopup">
+		<div class="popup-content  relative  rounded-2xl w-[85%] sm:w-[50%] lg:w-[45%] 2xl:w-[29%] text-center">
 			<p class="close absolute right-0 top-0 mr-3" onclick="closePopup()">&times;</p>
 			
            <div class="flex  justify-center">
             
-                <div class="max-w-[300px] rounded-xl  bg-[#C9E2B8] border border-white py-5 px-5  mt-5 md:mt-0  2xl:mt-2 mb-2 relative  md:ml-3">
-                    <div class="max-w-[350px] p-5  m-auto ">
+                <div class=" rounded-xl  bg-[#C9E2B8] border border-white py-5 px-5  mt-5 md:mt-0  2xl:mt-2 mb-2 relative  ">
+                    <div class="lg:w-72 2xl:w-80 p-5 font-light  m-auto ">
                   
                       <div class="col-span-2 lg:col-span-1">
                         <input type="text" id="name"  class="bg-[#C9E2B8] border-solid placeholder-black  border-b-2 p-3  md:text-lg w-[80%]" placeholder="Name"/>
@@ -200,18 +200,34 @@ document.addEventListener('DOMContentLoaded', function() {
                         <input type="text"  id="city" class="bg-[#C9E2B8] border-solid placeholder-black  border-b-2 p-3 md:text-lg w-[80%]" placeholder="City"/>
                       </div>
                       <div class="col-span-2 lg:col-span-1">
-                        <input type="text"  id="service" class="bg-[#C9E2B8] border-solid placeholder-black  border-b-2 p-3 md:text-lg w-[80%]" placeholder="Service"/>
-                      </div>
+                        
+                        <div class="relative  inline-block w-[90%] 2xl:w-[80%] text-gray-700">
+                          <select id="service" name="services" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                            <option  value="" disabled selected>Select a service</option>
+                            <option value="Consultancy">Consultancy</option>
+                            <option value="Turn Key">Turn Key</option>
+                            <option value="Styling">Styling</option>
+                            <option value="Designing">Designing</option>
+                            <option value="Customized Solution">Customized Solution</option>
+                          </select>
+                          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                            <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                              <path d="M14.71 7.29a1 1 0 0 0-1.42 0L10 10.59l-3.29-3.3a1 1 0 0 0-1.42 1.42l4 4a1 1 0 0 0 1.42 0l4-4a1 1 0 0 0 0-1.42z"/>
+                            </svg>
+                          </div>
+                        </div>
+                          </div>
                       <div class="col-span-2 lg:col-span-1">
                         <input type="text" id="budget"  class="bg-[#C9E2B8] border-solid placeholder-black  border-b-2 p-3 md:text-lg w-[80%]" placeholder="Budget"/>
                       </div>
                       <div class="col-span-2 lg:col-span-1">
                         <input type="text"  id="address" class="bg-[#C9E2B8] border-solid placeholder-black  border-b-2 p-3 md:text-lg w-[80%]" placeholder="Address"/>
                       </div>
-                    
-                      <div class="col-span-2 ml-5 text-center  bg-white  rounded-lg w-[74%] 2xl:ml-7     cursor-pointer shadow-lg  p-1  hover:font-semibold    mt-5">
+                    <div class="w-full   flex justify-center">
+                      <div class="col-span-2  text-center  bg-white  rounded-lg w-[74%] cursor-pointer shadow-lg  p-1  hover:font-medium    mt-5">
                             <button onclick="SendMail()" >Get Consultation</button>
                       </div>
+                    </div>
                   
                     </div>
                   </div>
