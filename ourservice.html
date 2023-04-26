@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	</style>
 </head>
 <body >
-	<div class="popup  " id="myPopup">
+	<div class="popup" id="myPopup">
 		<div class="popup-content  relative  rounded-2xl w-[85%] sm:w-[50%] lg:w-[45%] 2xl:w-[29%] text-center">
 			<p class="close absolute right-0 top-0 mr-3" onclick="closePopup()">&times;</p>
 			
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', function() {
                       </div>
                       <div class="col-span-2 lg:col-span-1">
                         
-                        <div class="relative  inline-block w-[90%] 2xl:w-[80%] text-gray-700">
+                        <div class="relative mt-3 2xl:mt-5 inline-block w-[90%] 2xl:w-[80%] text-gray-700">
                           <select id="service" name="services" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
                             <option  value="" disabled selected>Select a service</option>
                             <option value="Consultancy">Consultancy</option>
@@ -224,8 +224,21 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                           </div>
                       <div class="col-span-2 lg:col-span-1">
-                        <input type="text" id="budget"  class="bg-[#16AFA4] border-solid placeholder-black  border-b-2 p-3 md:text-lg w-[80%]" placeholder="Budget"/>
-                      </div>
+                        <div id="budget" class="relative mt-3 2xl:mt-5 inline-block w-[90%] 2xl:w-[80%] text-gray-700">
+                          <select  name="budget" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                            <option  value="" disabled selected>Choose Budget</option>
+                            <option value="Consultancy">10k-15k</option>
+                            <option value="Turn Key">20k-25k</option>
+                            <option value="Styling">30k-40k</option>
+                            <option value="Designing">40k-50k</option>
+                            <option value="Designing">50k+</option>
+                          </select>
+                          <div  class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                            <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                              <path d="M14.71 7.29a1 1 0 0 0-1.42 0L10 10.59l-3.29-3.3a1 1 0 0 0-1.42 1.42l4 4a1 1 0 0 0 1.42 0l4-4a1 1 0 0 0 0-1.42z"/>
+                            </svg>
+                          </div>
+                        </div>  </div>
                       <div class="col-span-2 lg:col-span-1">
                         <input type="text"  id="address" class="bg-[#16AFA4] border-solid placeholder-black  border-b-2 p-3 md:text-lg w-[80%]" placeholder="Address"/>
                       </div>
@@ -243,7 +256,34 @@ document.addEventListener('DOMContentLoaded', function() {
 	</div>
 
 	<script>
-		function openPopup() {
+		function openPopup(e) {
+      const cards=document.getElementsByClassName("cards");
+      console.log(cards);
+      const budget= document.getElementById("budget");
+     
+      console.log(e)
+       if(e==1||e==4)
+       { 
+         budget.style.display="inline-block";
+       }
+       else{
+        budget.style.display="none";
+       }
+      
+
+      
+      // for(i in cards){
+      //   if(i==1 || i==4)
+      //   {
+      //     console.log(cards[i]);
+          
+      //     budget.style.display="none";
+      //   }
+      //   else{
+      //     budget.style.display="block";
+      //   }
+      // }
+       
 			document.getElementById("myPopup").style.display = "block";
 		}
 
@@ -254,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <div class="services grid grid-cols-1 grid-rows-5 gap-2 mt-4 md:grid-rows-2 md:grid-cols-6 md:mt-6 md:gap-0">
         <!-- card1 -->
-        <div onclick="openPopup()" class="cards hover:translate-y-1 cursor-pointer pb-4 md:col-span-2" data-aos="flip-left">
+        <div id="0"  onclick="openPopup(0)" class="cards hover:translate-y-1 cursor-pointer pb-4 md:col-span-2" data-aos="flip-left">
             <div data-aos="flip-left" class="card  text-center m-auto "  style="width: 18rem;">
                 <div class="images  relative">
                     <img src="images/msg.png" class="m-auto drop-shadow-2xl mt-4" alt="...">
@@ -266,7 +306,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
 
         <!-- card2 -->
-        <div onclick="openPopup()"  class="cursor-pointer cards hover:translate-y-1 md:col-span-2" data-aos="flip-left">
+        <div  id="1" onclick="openPopup(1)"  class="cursor-pointer cards hover:translate-y-1 md:col-span-2" data-aos="flip-left">
             <div data-aos="flip-left" class="card  text-center m-auto "  style="width: 18rem;">
                 <div class="images  relative">
                     <img src="images/key.png" class="m-auto drop-shadow-2xl mt-4 " alt="...">
@@ -278,7 +318,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
 
         <!-- card3 -->
-        <div onclick="openPopup()"  class="cursor-pointer cards hover:translate-y-1 md:col-span-2" data-aos="flip-left">
+        <div  id="2" onclick="openPopup(2)"  class="cursor-pointer cards hover:translate-y-1 md:col-span-2" data-aos="flip-left">
             <div data-aos="flip-left" class="card  text-center m-auto "  style="width: 18rem;">
                 <div class="images  relative">
                     <img src="images/pencil.png" class="m-auto drop-shadow-2xl mt-4 " alt="...">
@@ -295,7 +335,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
         <!-- card4 -->
-        <div onclick="openPopup()"  class="cursor-pointer cards hover:translate-y-1 md:col-span-2 " data-aos="flip-left">
+        <div id="3"  onclick="openPopup(3)"  class="cursor-pointer cards hover:translate-y-1 md:col-span-2 " data-aos="flip-left">
             <div data-aos="flip-left" class="card  text-center m-auto "  style="width: 18rem;">
                 <div class="images  relative">
                     <img src="images/roller.png" class="m-auto drop-shadow-2xl mt-4" alt="...">
@@ -308,7 +348,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
         <!-- !-- card6 -->
-        <div onclick="openPopup()"  class="cursor-pointer  cards hover:translate-y-1 md:col-span-2 " data-aos="flip-left">
+        <div  id="4" onclick="openPopup(4)"  class="cursor-pointer  cards hover:translate-y-1 md:col-span-2 " data-aos="flip-left">
             <div data-aos="flip-left" class="card  text-center m-auto "  style="width: 18rem;">
                 <div class="images  relative">
                     <img src="images/toolkit.png" class="m-auto drop-shadow-2xl mt-4" alt="...">
