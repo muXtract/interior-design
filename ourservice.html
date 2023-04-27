@@ -206,20 +206,20 @@ document.addEventListener('DOMContentLoaded', function() {
                         <input type="text"  id="city" class="bg-[#16AFA4] border-solid placeholder-black  border-b-2 p-3 md:text-lg w-[80%]" placeholder="City"/>
                       </div>
                       <div class="col-span-2 lg:col-span-1">
-                        <select disabled class="inline-block  w-[80%] px-4 py-2 mt-3 text-gray-700 bg-gray-300 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:bg-white focus:border-indigo-500">
+                        <select id="service" disabled class="inline-block  w-[90%] 2xl:w-[80%] px-4 py-2 mt-3 text-gray-700 bg-gray-300 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:bg-white focus:border-indigo-500">
                           <option id="option" value="option1">Option 1</option>
                           
                         </select>
                       </div>
                       <div class="col-span-2 lg:col-span-1">
                         <div id="budget" class="relative mt-3 2xl:mt-5 inline-block w-[90%] 2xl:w-[80%] text-gray-700">
-                          <select  name="budget" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                          <select id="budget1" name="budget" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
                             <option  value="" disabled selected>Choose Budget</option>
-                            <option value="Consultancy">10k-15k</option>
-                            <option value="Turn Key">20k-25k</option>
-                            <option value="Styling">30k-40k</option>
-                            <option value="Designing">40k-50k</option>
-                            <option value="Designing">50k+</option>
+                            <option value="10k-15k">10k-15k</option>
+                            <option value="20k-25k">20k-25k</option>
+                            <option value="30k-40k">30k-40k</option>
+                            <option value="40k-50k">40k-50k</option>
+                            <option value="50k+">50k+</option>
                           </select>
                           <div  class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                             <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
@@ -249,7 +249,8 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log(cards);
       const budget=document.getElementById("budget");
       const option =document.getElementById("option");
-      
+      console.log(option)
+      option.value=`${cards[e].title}`;
       option.innerHTML=`${cards[e].title}`;
       console.log(e)
        if(e==1||e==4)

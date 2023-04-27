@@ -1,3 +1,16 @@
+// const budget=document.getElementById("budget");
+// console.log(budget);
+// budget.style.display="none";
+// const getBudget=()=>{
+//     console.log("hi");
+//     const option = document.getElementById("service");
+    
+//     if(option==="Turn Key"|| option==="Modular Furniture"){
+//         console.log("here")
+//         budget.style.display="inline-block";
+//     }
+   
+// }
 
 function SendMail(){
     var params={
@@ -7,7 +20,7 @@ function SendMail(){
         email:document.getElementById("email").value,
         city:document.getElementById("city").value,
         service:document.getElementById("service").value,
-        budget:document.getElementById("budget").value,
+        budget:document.getElementById("budget1").value,
         address:document.getElementById("address").value
     }
 
@@ -21,7 +34,7 @@ emailjs.send(serviceID,templateID,params)
         document.getElementById("email").value="";
         document.getElementById("city").value="";
         document.getElementById("service").value="";
-        document.getElementById("budget").value="";
+        document.getElementById("budget1").value="";
         document.getElementById("address").value="";
         console.log(res)
         alert("Thank you for submitting your form! We appreciate your interest and will be in touch with you shortly.");
