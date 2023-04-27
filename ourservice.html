@@ -206,23 +206,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         <input type="text"  id="city" class="bg-[#16AFA4] border-solid placeholder-black  border-b-2 p-3 md:text-lg w-[80%]" placeholder="City"/>
                       </div>
                       <div class="col-span-2 lg:col-span-1">
-                        
-                        <div class="relative mt-3 2xl:mt-5 inline-block w-[90%] 2xl:w-[80%] text-gray-700">
-                          <select id="service" name="services" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
-                            <option  value="" disabled selected>Select a service</option>
-                            <option value="Consultancy">Consultancy</option>
-                            <option value="Turn Key">Turn Key</option>
-                            <option value="Styling">Styling</option>
-                            <option value="Designing">Designing</option>
-                            <option value="Modular Furniture">Modular Furniture</option>
-                          </select>
-                          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                            <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
-                              <path d="M14.71 7.29a1 1 0 0 0-1.42 0L10 10.59l-3.29-3.3a1 1 0 0 0-1.42 1.42l4 4a1 1 0 0 0 1.42 0l4-4a1 1 0 0 0 0-1.42z"/>
-                            </svg>
-                          </div>
-                        </div>
-                          </div>
+                        <select disabled class="inline-block  w-[80%] px-4 py-2 mt-3 text-gray-700 bg-gray-300 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:bg-white focus:border-indigo-500">
+                          <option id="option" value="option1">Option 1</option>
+                          
+                        </select>
+                      </div>
                       <div class="col-span-2 lg:col-span-1">
                         <div id="budget" class="relative mt-3 2xl:mt-5 inline-block w-[90%] 2xl:w-[80%] text-gray-700">
                           <select  name="budget" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
@@ -259,8 +247,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		function openPopup(e) {
       const cards=document.getElementsByClassName("cards");
       console.log(cards);
-      const budget= document.getElementById("budget");
-     
+      const budget=document.getElementById("budget");
+      const option =document.getElementById("option");
+      
+      option.innerHTML=`${cards[e].title}`;
       console.log(e)
        if(e==1||e==4)
        { 
@@ -292,9 +282,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 	</script>
 
-    <div class="services grid grid-cols-1 grid-rows-5 gap-2 mt-4 md:grid-rows-2 md:grid-cols-6 md:mt-6 md:gap-0">
+    <div  class="services grid grid-cols-1 grid-rows-5 gap-2 mt-4 md:grid-rows-2 md:grid-cols-6 md:mt-6 md:gap-0">
         <!-- card1 -->
-        <div id="0"  onclick="openPopup(0)" class="cards hover:translate-y-1 cursor-pointer pb-4 md:col-span-2" data-aos="flip-left">
+        <div title="Consultancy" id="0"  onclick="openPopup(0)" class="cards Consultancy  hover:translate-y-1 cursor-pointer pb-4 md:col-span-2" data-aos="flip-left">
             <div data-aos="flip-left" class="card  text-center m-auto "  style="width: 18rem;">
                 <div class="images  relative">
                     <img src="images/msg.png" class="m-auto drop-shadow-2xl mt-4" alt="...">
@@ -306,7 +296,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
 
         <!-- card2 -->
-        <div  id="1" onclick="openPopup(1)"  class="cursor-pointer cards hover:translate-y-1 md:col-span-2" data-aos="flip-left">
+        <div title="Turn Key" id="1" onclick="openPopup(1)"  class="cursor-pointer Turn Key  cards hover:translate-y-1 md:col-span-2" data-aos="flip-left">
             <div data-aos="flip-left" class="card  text-center m-auto "  style="width: 18rem;">
                 <div class="images  relative">
                     <img src="images/key.png" class="m-auto drop-shadow-2xl mt-4 " alt="...">
@@ -318,7 +308,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
 
         <!-- card3 -->
-        <div  id="2" onclick="openPopup(2)"  class="cursor-pointer cards hover:translate-y-1 md:col-span-2" data-aos="flip-left">
+        <div title="Styling" id="2" onclick="openPopup(2)"  class="cursor-pointer  Styling cards hover:translate-y-1 md:col-span-2" data-aos="flip-left">
             <div data-aos="flip-left" class="card  text-center m-auto "  style="width: 18rem;">
                 <div class="images  relative">
                     <img src="images/pencil.png" class="m-auto drop-shadow-2xl mt-4 " alt="...">
@@ -335,7 +325,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
         <!-- card4 -->
-        <div id="3"  onclick="openPopup(3)"  class="cursor-pointer cards hover:translate-y-1 md:col-span-2 " data-aos="flip-left">
+        <div title="Designing" id="3"  onclick="openPopup(3)"  class="cursor-pointer Designing  cards hover:translate-y-1 md:col-span-2 " data-aos="flip-left">
             <div data-aos="flip-left" class="card  text-center m-auto "  style="width: 18rem;">
                 <div class="images  relative">
                     <img src="images/roller.png" class="m-auto drop-shadow-2xl mt-4" alt="...">
@@ -348,7 +338,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
         <!-- !-- card6 -->
-        <div  id="4" onclick="openPopup(4)"  class="cursor-pointer  cards hover:translate-y-1 md:col-span-2 " data-aos="flip-left">
+        <div title="Modular Furniture " id="4" onclick="openPopup(4)"  class="cursor-pointer  Modular Furniture  cards hover:translate-y-1 md:col-span-2 " data-aos="flip-left">
             <div data-aos="flip-left" class="card  text-center m-auto "  style="width: 18rem;">
                 <div class="images  relative">
                     <img src="images/toolkit.png" class="m-auto drop-shadow-2xl mt-4" alt="...">
