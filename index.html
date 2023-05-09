@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1N5QVNS0MH"></script>
 
 
 </head>
@@ -130,8 +131,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <div>
-    <video autoplay  muted class="object-contain  h-full w-full md:w-full md:h-[87vh]" src="images/finalo.mp4" type="video/mp4"></video>
+    <video autoplay  muted class="object-contain  h-full w-full  " src="images/vid.mp4" type="video/mp4"></video>
 </div>
+
 
 <!-- BETTER SECTION  -->
 <section class="bg-[#16AFA4] text-white ">
@@ -373,6 +375,13 @@ AOS.init({
    
     duration:1000
 });
+
+window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1N5QVNS0MH');
+
 </script>
 </body>
 </html>
