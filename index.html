@@ -21,8 +21,48 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1N5QVNS0MH"></script>
     <script src="gtag.js"></script>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
 
+<!-- <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
 
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style> -->
 </head>
 <body>  
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -185,10 +225,40 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<div>
+<!-- <div>
     <video autoplay  muted class="object-contain  h-full w-full  " src="images/vid.mp4" type="video/mp4"></video>
-</div>
+</div> -->
+<!-- Swiper -->
+<div class="relative h-[40vh] lg:h-[72vh]">
+    <!-- Overlay Text -->
+    <div class="overlay-text absolute top-0 left-0 w-full h-full flex justify-center items-center text-black text-xl">
+      Your Overlay Text
+    </div>
+  
+    <!-- Swiper -->
+    <div class="swiper mySwiper h-full">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide flex justify-center items-center text-xl bg-white"><img alt="" src="./images/1.JPG" class="bg-black/20 w-screen"/></div>
+        <div class="swiper-slide flex justify-center items-center text-xl bg-white"><img alt="" src="./images/1.JPG" class="bg-black/20 w-screen"/></div>
+        <div class="swiper-slide flex justify-center items-center text-xl bg-white"><img alt="" src="./images/1.JPG" class="bg-black/20 w-screen"/></div>
+        <div class="swiper-slide flex justify-center items-center text-xl bg-white"><img alt="" src="./images/1.JPG" class="bg-black/20 w-screen"/></div>
+      </div>
+    </div>
+  </div>
+  
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,          // Enable loop mode
+      autoplay: {
+        delay: 2000,       // Autoplay interval in milliseconds (2 seconds)
+      },
+    });
+  </script>
 
 <!-- BETTER SECTION  -->
 <section class="bg-[#16AFA4] text-white ">
@@ -292,7 +362,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
 
     </div>
-    <button class="heading font-semibold btn border-2 m-auto mt-4 lg:mt-0 rounded-2xl border-black p-4  w-52 "><a href="ourservice.html" class="hover:text-blue-600">EXPLORE MORE</a></button>
+    <!-- <button class="heading font-semibold btn border-2 m-auto mt-4 lg:mt-0 rounded-2xl border-black p-4  w-52 "><a href="ourservice.html" class="hover:text-blue-600">EXPLORE MORE</a></button> -->
 </div>
 </section>
 

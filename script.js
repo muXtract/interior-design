@@ -42,3 +42,4 @@ emailjs.send(serviceID,templateID,params)
     .catch((err)=>console.log(err));
     console.log("hi")
 }
+
