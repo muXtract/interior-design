@@ -230,20 +230,33 @@ document.addEventListener('DOMContentLoaded', function() {
 </div> -->
 <!-- Swiper -->
 <div class="relative h-[40vh] lg:h-[72vh]">
-    <!-- Overlay Text -->
-    <div class="overlay-text absolute top-0 left-0 w-full h-full flex justify-center items-center text-black text-xl">
-      Your Overlay Text
-    </div>
-  
     <!-- Swiper -->
-    <div class="swiper mySwiper h-full">
+    <div class="swiper mySwiper h-full relative z-10">
       <div class="swiper-wrapper">
-        <div class="swiper-slide flex justify-center items-center text-xl bg-white"><img alt="" src="./images/1.JPG" class="bg-black/20 w-screen"/></div>
-        <div class="swiper-slide flex justify-center items-center text-xl bg-white"><img alt="" src="./images/1.JPG" class="bg-black/20 w-screen"/></div>
-        <div class="swiper-slide flex justify-center items-center text-xl bg-white"><img alt="" src="./images/1.JPG" class="bg-black/20 w-screen"/></div>
-        <div class="swiper-slide flex justify-center items-center text-xl bg-white"><img alt="" src="./images/1.JPG" class="bg-black/20 w-screen"/></div>
+        <div class="swiper-slide h-full flex justify-center items-center text-xl bg-white">
+          <img alt="" src="./images/1.JPG" class="bg-black/20 w-screen h-full object-cover" />
+        </div>
+        <div class="swiper-slide h-full flex justify-center items-center text-xl bg-white">
+          <img alt="" src="./images/2.JPG" class="bg-black/20 w-screen h-full object-cover" />
+        </div>
+        <div class="swiper-slide h-full flex justify-center items-center text-xl bg-white">
+          <img alt="" src="./images/3.JPG" class="bg-black/20 w-screen h-full object-cover" />
+        </div>
+        <div class="swiper-slide h-full flex justify-center items-center text-xl bg-white">
+          <img alt="" src="./images/4.JPG" class="bg-black/20 w-screen h-full object-cover" />
+        </div>
       </div>
     </div>
+  
+    <!-- Overlay Text -->
+    <div class="overlay-text absolute top-0 left-0 w-full h-full flex flex-row text-black text-xl z-20">
+      <div class="w-full py-12 flex flex-col justify-center px-32">
+        <div class="text-6xl font-extrabold text-white my-4">Custom Design Solution</div>
+      <div class="font-bold text-lg text-white my-4">We are The Best Interior Designers in Gurgaon.
+        We provide unmatched quality of work, complete customer satisfaction and joyful handovers within the proposed time frame.</div>
+      <div class="bg-green-500 w-fit px-4 py-2 rounded-md font-bold text-lg text-white my-4">Book Free Consultation</div>
+    </div>
+      </div>
   </div>
   
 
