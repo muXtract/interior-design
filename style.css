@@ -2,11 +2,14 @@
     font-family: 'Poppins', 'kanit', 'Molengo';
 }
 
-h2{
+h2 {
     font-family: 'Poppins', 'kanit', 'Molengo';
 }
 
-body
-{
+body {
     font-family: 'Montserrat', sans-serif;
 }
+#heading {
+    font-family: 'Arvo', serif;
+}
+
